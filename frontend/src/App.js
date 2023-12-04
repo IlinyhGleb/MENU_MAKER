@@ -24,27 +24,70 @@ handleSubmit: Эта функция вызывается, когда польз�
 Если при выполнении запроса возникла ошибка, ошибка обрабатывается в блоке catch, и состояние totalSum устанавливается на «Произошла ошибка».*/
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('2000');
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event) => {
     // Действие, которое вы хотите выполнить при нажатии на кнопку
-    console.log('Вы ввели:', inputValue);
+    console.log('Вы f1f313ввели:', inputValue);
   };
 
+  // async addToCart() {
+  //     // POST request using fetch with async/await
+  //     const requestOptions = {
+  //         method: 'POST',
+  //         headers: { 'Content-Type': 'application/json' },
+  //         body: JSON.stringify({ food_energy_goal: 2000 })
+  //     };
+  //     const response = await fetch('http://localhost:5000/optim', requestOptions);
+  //     const data = await response.json();
+  //     this.setState({ postId: data.id });
+  // }
+
+  const addToCart = (event) => {
+    //'use server'
+    //const productId = formData.get('input')
+    console.log('Вы вв321312ели:')//, productId);
+    // event.preventDefault();
+    // alert(`Name:`);
+
+    // Simple POST request with a JSON body using fetch
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "food_energy_goal": 2000 })
+    };
+    fetch('http://localhost:5000/optim', requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+        //.then(data => this.setState({ postId: data.id }));
+    console.log('fads:')//, productId);
+
+    //{"food_energy_goal": 2000}' http://localhost:5000/optim
+  }
+  /*async function addToCart(formData) {
+    'use server'
+    const productId = formData.get('productId')
+    await updateCart(productId)
+  }*/
+      //<div className="center">
+        //<label htmlFor="inputField" className="label">FoodMaker</label>
+        //<input id="inputField" type="text" className="input" value={inputValue} onChange={handleInputChange}/>
+       // <button className="button" onClick={handleButtonClick}>Официант, меню!</button>
   return (
     <div className="App">
       <header className="App-header">
         <h1>FoodMaker</h1>
       </header>
-      <div className="center">
-        <label htmlFor="inputField" className="label">FoodMaker</label>
-        <input id="inputField" type="text" className="input" />
-        <button className="button">Официант, меню!</button>
-      </div>
+
+      <form onSubmit={addToCart}>
+        <input type="inputField" name="input" value={inputValue} onChange={handleInputChange} />
+        <button type="submit">Официант, меню!</button>
+      </form>
     </div>
   );
 }
