@@ -1,0 +1,634 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "ManropeBold";
+  src: url(./fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(./fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ManropeLight";
+  src: url(./fonts/Manrope-Light.ttf);
+}
+
+/* Сброс базовых стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+}
+
+/* Общие стили для всего приложения */
+
+body {
+  background: #ffffff;
+  padding: 0 2rem;
+  overflow: auto;
+}
+
+body.oh {
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #ae67fa;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ae67fa;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1,
+h2 {
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #f56363 1.84%, #e1ca20 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "ManropeBold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #ff4820;
+}
+
+.section {
+  max-width: 1169px;
+  width: 100%;
+
+  
+}
+
+.lined_header {
+ 
+  padding: 1rem 0;
+}
+
+/* Стили для Шапки */
+
+.header {
+  display: flex;
+  max-width: 1166px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background:   rgb(148, 233, 129);
+}
+
+.header .header__logo .logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__menu .menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.header .header__right.hidden {
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.header .header__right .menu__close {
+  width: 38px;
+  height: 38px;
+}
+
+.header .header__right .menu__close.hidden {
+  display: none;
+}
+
+.header .header__menu .menu .menu__item a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.header .header__menu .menu .menu__item:hover a {
+  border-bottom-color: #fff;
+}
+
+.header .header__menu .menu .menu__item.active a {
+  color: #f49867;
+  border-bottom-color: #f49867;
+}
+
+.header .header__burger_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header .header__burger_menu.hidden {
+  display: none;
+}
+
+.header .header__burger_menu .burger_menu__line,
+.header .header__right .menu__close .menu__line {
+  width: 43px;
+  height: 5px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.header .header__right .menu__close .menu__line:nth-child(1) {
+  position: relative;
+  top: 15px;
+  right: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.header .header__right .menu__close .menu__line:nth-child(2) {
+  position: relative;
+  top: 10px;
+  right: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.header .cta_buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+/* Стили для первого экрана (Хиро секция) */
+
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  /* min-height: 60vh; */
+  padding: 14rem 0 3rem;
+}
+
+.hero_section .hero_section__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+.hero_section .hero_section__left .left__description {
+  color: #81afdd;
+}
+
+.hero_section .hero_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
+}
+
+.hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.hero_section .hero_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.hero_section .hero_section__right {
+  height: 100%;
+}
+
+.hero_section .hero_section__right img {
+  width: 100%;
+}
+
+/*Форма регистрации*/
+.registration{
+  overflow: hidden;
+  width:100%;
+  align-content:center;
+  border-color: rgb(148, 233, 129);
+  box-sizing: border-box;
+  border-style:solid;
+  height: auto;
+}
+
+.registration form{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  /* min-height: 60vh; */
+  padding: 12rem 0 3rem;
+  flex-direction: column;
+  align-self: center;
+  margin-left: 35%;
+  height: auto;
+  
+}
+.registration h1{
+  width:100%;
+  text-align: center;
+  
+}
+.registration div{
+  width:100%;
+  margin-bottom: 10px;
+ 
+  
+}
+.registration input{
+  text-align: center;
+  font-size: 30px;
+  color: #000000;
+  
+  
+}
+.registration .header{
+ width:94.5%;
+  
+}
+
+.registration span{
+ color:red;
+  font-size: 30px;
+  margin-left: 20px;
+}
+.buttons{
+  margin-top: 15px;
+}
+
+ .buttons button{
+  
+  display: inline-block;  
+  box-sizing: border-box;
+  padding: 0 25px;
+  margin: 1px 15px 15px 1px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+  background-color: #c5f7c0;
+  box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;  
+  vertical-align: top;
+  transition: box-shadow 0.2s;
+ }
+ .buttons button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.buttons button:hover {
+  background-color: rgb(255, 128, 0);
+  color: #fff;
+}
+
+.links{
+ width: auto;
+margin-left: 15%;
+align-self: center;
+display: flex;
+flex-direction: row;
+height: auto;
+
+}
+
+.links h1{
+ font-size: 20px;
+  width: auto;
+}
+.links a{
+  margin-left: 10px;
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #f56363 1.84%, #e1ca20 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+ 
+ }
+
+ .links a:hover{
+  background: linear-gradient(90deg, #55e42a 1.84%, #f3f328 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+/*Для авторизации*/
+
+.buttons_in{
+margin-left: 15%;
+margin-top: 1%;
+}
+
+.buttons_in button{
+  
+  display: inline-block;  
+  box-sizing: border-box;
+  padding: 0 25px;
+  margin: 1px 15px 15px 1px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+  background-color: #c5f7c0;
+  box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;  
+  vertical-align: top;
+  transition: box-shadow 0.2s;
+ }
+ .buttons_in button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.buttons_in button:hover {
+  background-color: rgb(255, 128, 0);
+  color: #fff;
+}
+
+.links_in{
+  width: auto;
+ margin-left: 10%;
+ align-self: center;
+ display: flex;
+ flex-direction: row;
+ height: auto;
+ margin-top: 15%;
+ }
+ 
+ .links_in h1{
+  font-size: 20px;
+   width: auto;
+ }
+ .links_in a{
+   margin-left: 10px;
+   font-family: "ManropeBold", sans-serif;
+   background: linear-gradient(90deg, #f56363 1.84%, #e1ca20 102.67%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 20px;
+  
+  }
+ 
+  .links_in a:hover{
+   background: linear-gradient(90deg, #55e42a 1.84%, #f3f328 102.67%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+/* Медиа запросы для адаптива */
+
+@media screen and (max-width: 1024px) {
+  .page {
+    align-content: center;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header .header__logo .logo__link img {
+    width: 200%;
+  }
+
+  .header .header__right {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: #031b34;
+  }
+
+  .header .header__menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header .header__menu .menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .header .header__menu .menu__close {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+  }
+
+  .header .header__menu .menu .menu__item a {
+    font-size: 48px;
+  }
+
+  .hero_section {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 0;
+    width: 90%;
+  }
+
+  .hero_section .hero_section__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero_section .hero_section__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 60%;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons {
+    justify-content: center;
+  }
+
+  
+}
+
+@media screen and (max-width: 766px) {
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  .hero_section {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 765px) {
+  a {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+    min-width: auto;
+  }
+
+ 
+}

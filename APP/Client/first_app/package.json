@@ -1,0 +1,45 @@
+{
+  "name": "gpt4_react",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "axios": "^1.6.8",
+    "final-form": "^4.20.10",
+    "http-proxy-middleware": "^3.0.0",
+    "mobx-react-lite": "^4.0.7",
+    "rc-field-form": "^2.0.0",
+    "react": "^18.2.0",
+    "react-chat-elements": "^12.0.14",
+    "react-dom": "^18.2.0",
+    "react-final-form": "^6.5.9",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
+    "reactjs-popup": "^2.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080",
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
