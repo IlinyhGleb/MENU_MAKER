@@ -15,6 +15,7 @@ export const Products = ({ items, isLoading }) => {
       ) : (
         <ul className="products-list">
           {items.map((obj)=>
+          
           <Product key = {obj.id} caloricity = {obj.caloricity} category_id={obj.category_id}  product_name = {obj.product_name} weight={obj.weight} weight_for_one={obj.weight_for_one}/>
           )}
          

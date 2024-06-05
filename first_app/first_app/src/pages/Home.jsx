@@ -19,29 +19,16 @@ useEffect(()=>{
   })
   .catch(err=> console.log(err))
 },[])
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const [products, setProducts] = React.useState([]);
 const [isLoading, setLoading] = React.useState(true);
 
- const OnMenuGenerated = async ()=> {
-  await sleep(300);
-  const response= await fetch('/myoptim/get/gramms', {
-    method: 'GET',
-    headers: {
-    'Content-Type': 'application/json'
-    }
-  }).then(response => {
-  if (response.data.isResult) {
-    console.log(response.data.menu_breakfast);
-    setProducts(response.data.menu_breakfast);
+ const OnMenuGenerated = data => {
+  
+    setProducts(data);
     setLoading(false);
-  } 
-  else {
-}
-})
-.catch(error => {
-console.error('Error:', error);
-});}
+ 
+};
   
   
 

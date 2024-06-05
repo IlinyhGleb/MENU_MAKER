@@ -527,7 +527,7 @@ app.post('/myoptim', async (req, res) => {
     await Generate(new_food_energy_goal,ref_id);
     
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await sleep(50000);
+    await sleep(100);
    
      
       return res.status(200).send('menu was generated');
@@ -570,17 +570,20 @@ app.post('/myoptim', async (req, res) => {
 }
 
 
-app.get('/myoptim/get/gramms', (req,res)=>{
-
+app.get('/get/gramms', (req,res)=>{
+  return res.json(respon);
   if (respon!=0){
   if(respon.isResult){
+    console.log(respon.menu_breakfast)
     return res.json({"isResult":respon.isResult, "menu_breakfast":respon.menu_breakfast})
   }
   else{
+    console.log("не Получилось")
     return res.json({"isResult":false})
   }
 }
   else{
+    console.log(" не Получилось")
     return res.json({"isResult":false})
   }
 })

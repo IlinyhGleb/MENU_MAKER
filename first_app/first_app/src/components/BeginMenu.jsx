@@ -107,7 +107,7 @@ export const FormTemplate=({beginButton})=>{
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const onSubmit = async (values) => {
-    await sleep(300);
+    await sleep(400);
     const body= {
       "food_energy_goal": values.kalories,
       "ref_id": 1
@@ -121,7 +121,7 @@ const onSubmit = async (values) => {
     }
   }).then(response => {
   if (response.ok) {
-      
+      console.log("ok");
         //window.location.href = "#menu";
   }
   })
