@@ -276,6 +276,7 @@ p {
   column-gap: 1rem;
   /* min-height: 60vh; */
   padding: 10rem 0 1rem;
+  flex-direction: column;
 }
 
 .hero_section .hero_section__left {
@@ -1593,7 +1594,7 @@ margin-top: 11%;
  font-size: 30px;
  }
 
- .hero_section_center .menu{
+ .menu_prods{
   
   display: flex;
   flex-direction:row;
@@ -1602,13 +1603,14 @@ margin-top: 11%;
   gap: 100px;
   margin-top: 250px;
   padding-bottom: 30px;
-  width:100%;
+  width:90%;
+  margin-left:10%;
  }
-.hero_section_center .menu .menuData{
+ .menu_prods .menuData{
   width:40%;
   
 }
-.hero_section_center .menu .menuData .menuTitle{
+.menu_prods .menuData .menuTitle{
   text-align: center;
   width: 100%;
   border: 1px solid  #224622;
@@ -1619,17 +1621,17 @@ margin-top: 11%;
   color: #224622;
   font-weight:900;
 }
-.hero_section_center .menu .menuData .menuProducts .prod{
+.menu_prods .menuData .menuProducts .prod{
   display: flex;
   flex-direction: row;
 
 }
 
-.hero_section_center .menu .menuData .menuProducts .prod .products{
+.menu_prods .menuData .menuProducts .prod .products{
   margin-right: 10px;
   width: 100%;
 }
-.hero_section_center .menu .menuData .menuProducts .prod .gr{
+.menu_prods .menuData .menuProducts .prod .gr{
   text-align: right;
   width: 100%;
   

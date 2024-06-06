@@ -167,15 +167,15 @@ const BeginMenu = () => {
           <HeaderTemplate headerData = {headerData} />  
           <FormTemplate  beginButton={beginButton} />  
         
-          <div className="menu" id="menu">
-            {/*<MenuTemplate menuData = {breakfastData} />
+          {/*<div className="menu" id="menu">
+           <MenuTemplate menuData = {breakfastData} />
             <MenuTemplate menuData = {lunchData} />
             <MenuTemplate menuData = {dinnerData} />
-    <MenuTemplate menuData = {breakData} />*/}
+    <MenuTemplate menuData = {breakData} />
 
              
           </div>
-          <LogoTemplate logoData={restartButton}/>
+          <LogoTemplate logoData={restartButton}/>*/}
         </div>
         </>
       );

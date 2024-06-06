@@ -20,12 +20,18 @@ useEffect(()=>{
   .catch(err=> console.log(err))
 },[])
 
-const [products, setProducts] = React.useState([]);
+const [breakfast, setBreakfast] = React.useState([]);
+const [lunch, setLunch] = React.useState([]);
+const [dinner, setDinner] = React.useState([]);
+const [snack, setSnack] = React.useState([]);
 const [isLoading, setLoading] = React.useState(true);
 
- const OnMenuGenerated = data => {
+ const OnMenuGenerated = (data_br, data_lu, data_di, data_sn) => {
   
-    setProducts(data);
+  setBreakfast(data_br);
+  setLunch(data_lu);
+  setDinner(data_di);
+  setSnack(data_sn);
     setLoading(false);
  
 };
@@ -43,9 +49,10 @@ const [isLoading, setLoading] = React.useState(true);
         <Hero />
       </section>
       <section className="section hero_section" id="beginning_of_menu">
-        <BeginMenu />
-        <Products items={products} isLoading={isLoading}/>
+        <BeginMenu /> 
         <GetMenuButton OnMenuGenerated={OnMenuGenerated}/>
+        <Products breakfast={breakfast} lunch={lunch} dinner={dinner} snack={snack} isLoading={isLoading}/>
+       
       </section>
     </>
   );

@@ -8,7 +8,8 @@ const GetMenuButton = ({OnMenuGenerated}) => {
   .then( res=>{
     if(res.data.isResult){
       console.log(res.data.menu_breakfast);
-      OnMenuGenerated(res.data.menu_breakfast, res.data.menu_lunch, res.data.menu_dinner, res.data.menu_snack);
+      OnMenuGenerated(res.data.menu_breakfast);
+      
     }
     else{
      
