@@ -80,8 +80,6 @@ const response= await fetch('/users/getin', {
 if (response.ok) {
   
   alert("Вы успешно вошли!");
-
-  window.parent.postMessage("message", "http://localhost:3000/authorization"); 
   
   window.top.location.reload();
   //window.location.replace('/main');

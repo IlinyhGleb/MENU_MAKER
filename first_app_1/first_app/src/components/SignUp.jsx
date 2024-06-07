@@ -118,7 +118,8 @@ const response= await fetch('/users/add', {
 if (response.ok) {
   alert("Вы успешно зарегистрировались!");
  
-  window.location.replace("/main");
+  window.top.location.reload();
+  //window.location.replace("/main");
 
 } else {
   alert("Пользователь с таким логином уже существует. Пожалуйста, выберите новый логин.");

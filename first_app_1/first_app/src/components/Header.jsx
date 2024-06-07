@@ -56,18 +56,6 @@ export const ButtonTemplate = ({ buttonData }) => {
   const { title, href, isPrimary } = buttonData;
   const [shown, setShown] = useState(false)
 
-  useEffect(() => {
-    const messageHandler = (event) => {
-      if (event.origin=='http://localhost:3000/authorization') { // родитель уверен, что сигнал от надежного источника
-        alert('sss'); 
-        window.frames.close();
-      };
-    };
-    window.addEventListener('message', messageHandler);
-  
-  return () => window.removeEventListener('message', messageHandler);
-  }, []);
-
   return (
     
     <div>
