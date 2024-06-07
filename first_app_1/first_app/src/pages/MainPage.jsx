@@ -1,8 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import {Hero} from "../components/Hero";
 import { NewHeader } from "../components/NewHeader";
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
+
+import {Hero} from "../components/Hero";
+import { About } from "../components/About";
+import {BeginMenu} from "../components/BeginMenu";
+import {Faq} from "../components/Faq.jsx";
 
 function MainPage ()  {
   const [name,setName] = useState('')
@@ -27,8 +31,17 @@ useEffect(()=>{
       <section className="section header">
         <NewHeader />
       </section>  
-      <section className="section hero_section">
+      <section className="section menu_maker_section">
         <Hero />
+      </section>
+      <section className="section hero_section" id="about_us_block">
+        <About />
+      </section>
+      <section className="section faq_section" id="faq_block">
+        <Faq />
+      </section>
+      <section className="section hero_section" id="beginning_of_menu">
+        <BeginMenu />
       </section>
     </>
   );

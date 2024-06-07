@@ -11,9 +11,11 @@ export const Products = ({ breakfast,lunch,dinner,snack, isLoading }) => {
           <Skeleton />
           <Skeleton />
           <Skeleton />
+          <Skeleton />
+          <Skeleton />
         </div>
       ) : (
-        <div className="menu_prods">
+        <div className="menu_prods" id="menu">
         <div className="menuData">
           <div className="menuTitle"> Завтрак</div>
           <div className="menuProducts">

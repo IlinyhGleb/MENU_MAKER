@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import {Link} from "react-router-dom";
 import { heroData } from "../mockData/heroData";
-import food2 from "../assets/img/food.svg";
+import food2 from "../assets/img/menuMakerBack.jpg";
+
 export const HeaderTemplate = ({ header }) => {
-  return <h1 className="left__header">{header}</h1>;
+  return <h1 className="center_header">{header}</h1>;
 };
 
 export const DescriptionTemplate = ({ description }) => {
@@ -43,19 +44,16 @@ export const IllustrationTemplate = ({ illustration }) => {
 
 const Hero = () => {
   const { header, description, illustration, heroCtaButtons } = heroData;
-
   // console.log(heroCtaButtons);
-
   return (
     <>
-      <div className="hero_section__left">
+    
+      <div className="menu_maker_section__left">
         <HeaderTemplate header={header} />
         <DescriptionTemplate description={description} />
         <ButtonsTemplate ctaButtons={heroCtaButtons} />
       </div>
-      <div className="hero_section__right">
-        <IllustrationTemplate illustration={illustration} />
-      </div>
+     
     </>
   );
 };

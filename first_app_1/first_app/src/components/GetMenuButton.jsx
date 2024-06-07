@@ -9,6 +9,7 @@ const GetMenuButton = ({OnMenuGenerated}) => {
     if(res.data.isResult){
       console.log(res.data.menu_breakfast);
       OnMenuGenerated(res.data.menu_breakfast, res.data.menu_lunch, res.data.menu_dinner, res.data.menu_snack);
+      window.location.href = "#menu";
     }
     else{
      
@@ -16,9 +17,6 @@ const GetMenuButton = ({OnMenuGenerated}) => {
   })
   .catch(err=> console.log(err))
 }
- 
- 
-  
     return (
         <>
         <div>

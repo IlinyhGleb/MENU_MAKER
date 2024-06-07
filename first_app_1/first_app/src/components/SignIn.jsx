@@ -67,12 +67,7 @@ const onSubmit = async (values) => {
   const body= {
     "login": values.login,
     "password": values.password,
-    
-   
-};
-
-
-
+  };
 
 const response= await fetch('/users/getin', {
   method: 'POST',
@@ -81,14 +76,15 @@ const response= await fetch('/users/getin', {
   headers: {
     'Content-Type': 'application/json'
   }
-
-
 }).then(response => {
 if (response.ok) {
+  
   alert("Вы успешно вошли!");
+
+  window.parent.postMessage("message", "http://localhost:3000/authorization"); 
   
-  window.location.replace("/main");
-  
+  window.top.location.reload();
+  //window.location.replace('/main');
 
 } else {
   alert("Неверный логин или пароль.");

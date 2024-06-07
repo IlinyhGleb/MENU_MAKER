@@ -11,7 +11,7 @@ export const Product = ({caloricity,category_id, id,product_name,weight,weight_f
     
     
     if(checked){
-      setValue(Math.ceil(weight/weight_for_one)+" штук");
+      setValue(Math.ceil(weight/weight_for_one)+" шт.");
     }
     else{
       setValue(MyRound10(weight)+" грамм");

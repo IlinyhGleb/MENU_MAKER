@@ -2,7 +2,7 @@
 export const menuData = [
   {
     title: "О нас",
-    href: "#",
+    href: "#about_us_block",
   },
   {
     title: "FAQ",
@@ -28,8 +28,7 @@ export const buttonsData = [
 ];
 
 export const logoData = {
-  alt: "logo",
-  src: "./assets/img/logo.jpg",
+  title: "MENU MAKER",
   href: "#",
 };
 

@@ -1,14 +1,14 @@
 export const heroCtaButtons = [
   {
     title: "Начать",
-    href: "#",
+    href: "#beginning_of_menu",
     isPrimary: true,
   },
 ];
 
 export const illustration = {
   src: "#",
-  alt: "gpt3",
+  alt: "menumaker",
 };
 
 export const header =

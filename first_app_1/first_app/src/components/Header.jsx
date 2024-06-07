@@ -10,13 +10,12 @@ const noOverflow = () => body.classList.add("oh");
 const overflow = () => body.classList.remove("oh");
 
 export const LogoTemplate = ({ logoData }) => {
-  const { alt, href } = logoData;
-
+  const { text, href } = logoData;
   return (
     <div className="header__logo">
-      <a href={href} className="logo__link">
-        <img className="link__name" src={Logo} alt={alt} />
-      </a>
+        <div className="header__logo__name" >
+        MENU MAKER
+        </div>    
     </div>
   );
 };
@@ -37,6 +36,8 @@ export const BurgerTemplate = ({ isBurgerActive, setIsMenuShown }) => (
   </div>
 );
 
+
+
 export const MenuItemTemplate = ({ menuItemData }) => {
   const { title, href } = menuItemData;
 
@@ -49,18 +50,38 @@ export const MenuItemTemplate = ({ menuItemData }) => {
   );
 };
 
+
 export const ButtonTemplate = ({ buttonData }) => {
   // console.log(buttonData);
   const { title, href, isPrimary } = buttonData;
+  const [shown, setShown] = useState(false)
+
+  useEffect(() => {
+    const messageHandler = (event) => {
+      if (event.origin=='http://localhost:3000/authorization') { // родитель уверен, что сигнал от надежного источника
+        alert('sss'); 
+        window.frames.close();
+      };
+    };
+    window.addEventListener('message', messageHandler);
+  
+  return () => window.removeEventListener('message', messageHandler);
+  }, []);
 
   return (
-    <Link to={href}>
+    
+    <div>
+      {shown? <iframe id = "iframe" src={href}/> : null}
+      
       <button
         className={`cta_buttons__signin btn${isPrimary ? " primary-btn" : ""}`}
+        onClick={() => setShown(!shown)}
       >
         {title}
       </button>
-    </Link>
+
+    </div>
+    
   );
 };
 
@@ -134,7 +155,6 @@ const Header = () => {
       window.removeEventListener("resize", updateBurgerState);
     };
   }, []);
-
   return (
     <>
       <LogoTemplate logoData={logoData} />
