@@ -1,11 +1,11 @@
 import {SignIn} from "../components/SignIn";
 
 
-const FormAuthorization = () => {
+const FormAuthorization = ({onClickSignIn}) => {
   return (
     <>
       <section className="registration">
-        <SignIn />
+        <SignIn onClickSignIn={onClickSignIn}/>
       </section>
     </>
   );

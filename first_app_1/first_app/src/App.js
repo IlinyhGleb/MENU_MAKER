@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/registration" element={<FormRegistration/>}/>
-      <Route path="/authorization" element={<FormAuthorization/>}/>
+      <Route path="/authorization" element={<FormAuthorization />}/>
       <Route element={<PrivateRoute />}>
         <Route path="/main" element={<MainPage/>}/>
       </Route>

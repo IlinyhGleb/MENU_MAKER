@@ -8,26 +8,33 @@ import {BeginMenu} from "../components/BeginMenu";
 import {Products} from "../components/Products";
 import {GetMenuButton} from "../components/GetMenuButton";
 import {Faq} from "../components/Faq.jsx";
+import {AutoIframe} from "../components/AutoIframe";
+
 
 function Home () {
-  const [name,setName] = useState('')
-  const navigate = useNavigate()
-useEffect(()=>{
-  axios.get('/api')
-  .then( res=>{
-    if(res.data.valid){
-      setName(res.data.username);
-      navigate('/main');
-    }
-  })
-  .catch(err=> console.log(err))
-},[])
+    const [name,setName] = useState('')
+    const navigate = useNavigate()
+  useEffect(()=>{
+    axios.get('/api')
+    .then( res=>{
+      if(res.data.valid){
+        setName(res.data.username);
+        navigate('/main');
+      }
+    })
+    .catch(err=> console.log(err))
+  },[])
 
 const [breakfast, setBreakfast] = React.useState([]);
 const [lunch, setLunch] = React.useState([]);
 const [dinner, setDinner] = React.useState([]);
 const [snack, setSnack] = React.useState([]);
 const [isLoading, setLoading] = React.useState(true);
+const [autoIframe, setAutoIframe] = React.useState(false); 
+
+const onClickSignIn = () => {
+  setAutoIframe(!autoIframe);
+}
 
  const OnMenuGenerated = (data_br, data_lu, data_di, data_sn) => {
   
@@ -41,9 +48,11 @@ const [isLoading, setLoading] = React.useState(true);
 
   return (
     <>
-    
+      {autoIframe? <AutoIframe className="registration" onClickSignIn={onClickSignIn}/> : null}
+      
+     
       <section className="section header">
-        <Header />
+        <Header onClickSignIn={onClickSignIn}/>
       </section>  
       <section className="section menu_maker_section">
         <Hero />

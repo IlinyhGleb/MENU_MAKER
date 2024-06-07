@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
 import headerData from "../mockData/headerData";
-import Logo from "../assets/img/logo.jpg";
 import React  from "react";
 
 // блокируем и разблокируем скролл во время открытия модального окна
@@ -51,10 +50,10 @@ export const MenuItemTemplate = ({ menuItemData }) => {
 };
 
 
-export const ButtonTemplate = ({ buttonData }) => {
+export const ButtonTemplate = ({ buttonData, onClickSignIn }) => {
   // console.log(buttonData);
   const { title, href, isPrimary } = buttonData;
-  const [shown, setShown] = useState(false)
+  const [shown, setShown] = useState(false);
 
   useEffect(() => {
     const messageHandler = (event) => {
@@ -67,21 +66,17 @@ export const ButtonTemplate = ({ buttonData }) => {
   
   return () => window.removeEventListener('message', messageHandler);
   }, []);
-
-  return (
-    
-    <div>
-      {shown? <iframe id = "iframe" src={href}/> : null}
+  // {shown? <iframe id = "iframe" src={href}/> : null}
       
-      <button
+  return ( 
+    <div>
+       <button
         className={`cta_buttons__signin btn${isPrimary ? " primary-btn" : ""}`}
-        onClick={() => setShown(!shown)}
+        onClick={() => onClickSignIn()}
       >
         {title}
       </button>
-
     </div>
-    
   );
 };
 
@@ -91,6 +86,7 @@ export const RightHeaderTemplate = ({
   isBurgerActive,
   isMenuShown,
   setIsMenuShown,
+  onClickSignIn
 }) => {
   const { menuData, buttonsData } = rightHeaderData;
 
@@ -116,7 +112,7 @@ export const RightHeaderTemplate = ({
         </aside>
         <div className="cta_buttons">
           {buttonsData.map((button, index) => (
-            <ButtonTemplate key={index} buttonData={button} />
+            <ButtonTemplate key={index} buttonData={button} onClickSignIn={onClickSignIn} />
           ))}
         </div>
       </div>
@@ -124,7 +120,7 @@ export const RightHeaderTemplate = ({
   );
 };
 
-const Header = () => {
+const Header = ({onClickSignIn}) => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
   const [isMenuShown, setIsMenuShown] = useState(false);
 
@@ -163,10 +159,11 @@ const Header = () => {
         setIsMenuShown={setIsMenuShown}
       />
       <RightHeaderTemplate
-        rightHeaderData={{ menuData, buttonsData }}
+        rightHeaderData={{ menuData, buttonsData }} 
         isBurgerActive={isBurgerActive}
         isMenuShown={isMenuShown}
         setIsMenuShown={setIsMenuShown}
+        onClickSignIn={onClickSignIn}
       />
     </>
   );
