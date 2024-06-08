@@ -6,7 +6,7 @@ export const menuData = [
   },
   {
     title: "FAQ",
-    href: "#",
+    href: "#faq_block",
   },
   {
     title: "Контакты",
