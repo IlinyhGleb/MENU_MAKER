@@ -48,7 +48,7 @@ const [isLoading, setLoading] = React.useState(true);
       <section className="section menu_maker_section">
         <Hero />
       </section>
-      <section className="section hero_section" id="about_us_block">
+      <section className="section about_section" id="about_us_block">
         <About />
       </section>
       <section className="section faq_section" id="faq_block">

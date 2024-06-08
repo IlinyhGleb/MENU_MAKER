@@ -457,236 +457,108 @@ p {
   margin-right: 2%;
 }
 
-
-
-
-/* Секция брендов */
-
-.brands_section {
+.faq_section {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
-  column-gap: 3rem;
+  justify-content: space-between;
+  width:100%;
+  margin-top: 0%;
+  align-content: center;
+  overflow: hidden;
+  flex-direction: column;
 }
 
-/* Что такое Chat GPT */
-
-.what_is_chatgpt_section {
-  display: flex;
+.faq_section_center{
+  width:100%;
+  align-content: center;
+  overflow: hidden;
   flex-direction: column;
-  padding: 3rem;
-  margin: 6rem 0;
-  row-gap: 7rem;
+}
+
+.faq_section  .faq_section_center  h1{
+  font-size: 60px;
+  width: 70%;
+  margin-left: 15%;
   
 }
 
-.what_is_chatgpt_section .what_is_chatgpt_section__top {
-  display: flex;
-  column-gap: 3rem;
-}
 
-.what_is_chatgpt_section .what_is_chatgpt_section__top .top__header {
-  flex: 30%;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__top .top__content {
-  flex: 65%;
-  color: #81afdd;
-  font-size: 14px;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__middle {
+/* Секция About*/
+.about_section {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  column-gap: 1rem;
+  /* min-height: 60vh; */
+  padding: 0rem 0 1rem;
+  margin-top: 10px;
+  /*flex-direction: column;*/
 }
 
-.what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
-  width: 500px;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__middle a {
-  color: #ff8a71;
-  font-size: 16px;
-  border-bottom: 1px solid transparent;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__middle a:hover {
-  border-bottom: 1px solid #ff8a71;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  column-gap: 2rem;
-}
-
-.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-}
-
-.what_is_chatgpt_section
-  .what_is_chatgpt_section__bottom
-  .bottom__container
-  .container__content {
-  color: #81afdd;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-/* Будущее наступило */
-
-.future_here {
-  display: flex;
-  column-gap: 6rem;
-  margin: 6rem 0 2rem;
-}
-
-.future_here .future_here__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 2rem;
-  flex: 2;
-}
-
-.future_here .future_here__left .left__cta {
-  color: #f49867;
-  border-bottom: 1px solid transparent;
-}
-
-.future_here .future_here__left a:hover {
-  border-bottom: 1px solid #f49867;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-.future_here .future_here__right {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
-}
-
-.future_here .future_here__right .right__container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.future_here .future_here__right .right__container .container__header {
-  width: 35%;
-}
-
-.future_here .future_here__right .right__container .container__content {
-  width: 55%;
-  color: #81afdd;
-}
-/* Стили для четвертого экрана (Превосходя все ожидания) */
-
-.exceeding_expectation {
-  display: flex;
-  column-gap: 0rem;
-  min-height: 0vh;
-  margin: 4rem 0 3rem;
-  align-items: flex-end;
-  align-content: space-between;
-  width: 100%;
-  margin-left: 10%;
-}
-
-.exceeding_expectation .exceeding_expectation__left {
-  height: 100%;
-  width: 40%;
-}
-
-.exceeding_expectation .exceeding_expectation__left img {
-  width: 100%;
-}
-
-.exceeding_expectation .exceeding_expectation__right {
+.about_section .about_section__left {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   row-gap: 3rem;
   width: 50%;
+  margin-left: 0;
 }
 
-.exceeding_expectation .exceeding_expectation__right .container__content_1 {
-    /* Запроси ранний доступ */
-  width: 183px;
-  height: 48px;
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
-  /* identical to box height, or 188% */
-  color: #71E5FF;
+.about_section .about_section__left h3{
+  color: #000000;
 }
-.exceeding_expectation .exceeding_expectation__right .right__header {
-  /* Превосходя все ожидания */
-  width: 426px;
-  height: 109px;
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 34px;
-  line-height: 45px;
-  /* or 132% */
-  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%), #FFFFFF;
+
+.about_section .about_section__left .left_header 
+{
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #7acc00 1.84%, #f49867 102.67%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 0%;
+  font-size: 60px;
 }
 
-.exceeding_expectation .exceeding_expectation__right .right__cta {
-  width: 200px;
-  height: 147px;
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
-  /* identical to box height, or 188% */
-  color: #FF8A71;
+.about_section .about_section__left .left__description {
+  color: #000000;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 0%;
+  margin-left:0%;
+  margin-right: 5%;
 }
 
-.exceeding_expectation .exceeding_expectation__right .right__container  a:hover {
-  border-bottom: 1px solid #ff8a71;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+.about_section .about_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
 }
 
-.exceeding_expectation .exceeding_expectation__right .container__content_2 {
-    /* Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили. */
-  width: 479px;
-  height: 141px;
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
-  /* or 188% */
-  color: #81AFDD;
+.about_section .about_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.about_section .about_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.about_section .about_section__right {
+  margin-top: 2%;
+  margin-left: -20%;
+  height: 100%;
+  max-width: 60%;
+}
+
+.about_section .about_section__right img {
+  width: 45%;
+  margin-top: 2%;
+  margin-right: 2%;
 }
 
 /* Стили для пятого экрана (Регистрация и ...) */

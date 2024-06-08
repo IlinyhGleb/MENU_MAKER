@@ -40,14 +40,14 @@ const About = () => {
     const { header, description} = aboutData;
  
     return (
-      <div className="hero_section">
+      <div className="about_section">
         
-        <div className="hero_section__left">
+        <div className="about_section__left">
           <HeaderTemplate header={header} />
           <DescriptionTemplate description={description} />
         </div>
       
-        <div className="hero_section__right">
+        <div className="about_section__right">
          <IllustrationTemplate illustration={illustration} />
         </div>
       </div>

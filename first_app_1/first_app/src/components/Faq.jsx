@@ -11,7 +11,7 @@ export const Faq = () => {
   // console.log(heroCtaButtons);
   return (
     <>
-      <div className="hero_section__left">
+      <div className="faq_section_center">
         <HeaderTemplate header={header} />
       </div>
      
