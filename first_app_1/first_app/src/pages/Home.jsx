@@ -8,7 +8,8 @@ import {BeginMenu} from "../components/BeginMenu";
 import {Products} from "../components/Products";
 import {GetMenuButton} from "../components/GetMenuButton";
 import {Faq} from "../components/Faq.jsx";
-import {Contacts} from "../components/Contacts.jsx";
+import {Contacts} from "../components/Contacts";
+import {Footer} from "../components/Footer";
 
 function Home () {
   const [name,setName] = useState('')
@@ -64,9 +65,11 @@ const [isLoading, setLoading] = React.useState(true);
         <GetMenuButton OnMenuGenerated={OnMenuGenerated}/>
         <Products breakfast={breakfast} lunch={lunch} dinner={dinner} snack={snack} isLoading={isLoading}/>
       </section>
-
       <section className="section contacts_section" id="contacts_block">
         <Contacts />
+      </section>
+      <section className="section footer_section" >
+        <Footer/>
       </section>
     </>
   );

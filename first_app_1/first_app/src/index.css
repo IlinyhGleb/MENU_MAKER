@@ -642,9 +642,10 @@ p {
 }
 
 .contacts_section .contacts_section_center .center_header {
-  padding-top: 10%;
+  padding-top: 13%;
   text-align: center;
   font-weight: bold;
+  padding-bottom: 5%;
 }
 
 .contacts_section .contacts_section_center .contacts_center_info {
@@ -653,7 +654,22 @@ p {
   font-size: 30px;
 } 
 .contacts_section .center_write {
-  padding-top: 0%
+  text-align: center;
+  padding-top: 7%;
+  font-size: 15px;
+}
+
+/*Стили для секции "Footer"*/
+.footer_section {
+  height: 60px;
+  min-width: 100%;
+  background: linear-gradient(90deg, #7acc00 1.84%, #f49867 102.67%);
+}
+.footer_section .center_header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 10px;
+  margin-top: 25px;
 }
 
 /* Стили для пятого экрана (Регистрация и ...) */
@@ -1156,14 +1172,7 @@ button:hover {
 .blog .blog__right .box_5 .one_5 a:hover{
   border-bottom: 1px solid #ffffff;
 }
-.footer{
-  /* Background */
-  width: 1440px;
-  height: 950px;
-  background: #031B34;
-  margin: 0;
 
-}
 
 
 .footer .footer_end{

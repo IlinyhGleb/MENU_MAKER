@@ -17,10 +17,9 @@ export const Contacts = () => {
     return(
         <div className="contacts_section_center">
             <HeaderTemplate questions={questions}/>
-            <div className="center_header"> Напиши нам, мы все расскажем. </div>
             <NumberTemplate number={number}/>
             <EmailTemplate email={email}/>
-            
+            <div className="center_write"> Напиши нам, мы все расскажем. </div>
         </div>
     ); 
 };
