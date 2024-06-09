@@ -3,6 +3,7 @@ export const menuData = [
   {
     title: "О нас",
     href: "#about_us_block",
+    href1: "main#about_us_block"
   },
   {
     title: "FAQ",

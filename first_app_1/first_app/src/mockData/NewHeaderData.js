@@ -2,15 +2,15 @@
 export const menuData = [
   {
     title: "О нас",
-    href: "#",
+    href: "#about_us_block",
   },
   {
     title: "FAQ",
-    href: "#",
+    href: "#faq_block",
   },
   {
     title: "Контакты",
-    href: "#",
+    href: "#contacts_block",
   },
 ];
 
@@ -28,8 +28,7 @@ export const buttonsData = [
 ];
 
 export const logoData = {
-  alt: "logo",
-  src: "",
+  title: "MENU MAKER",
   href: "#",
 };
 

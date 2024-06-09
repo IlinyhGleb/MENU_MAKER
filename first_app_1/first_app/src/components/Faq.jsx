@@ -35,8 +35,6 @@ export const FaqListTemplate = ({faq}) => {
   );
 };
 
-
-
 export const Faq = () => {
   const { header, descr, faq} = faqData;
   // console.log(heroCtaButtons);

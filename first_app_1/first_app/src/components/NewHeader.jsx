@@ -8,13 +8,12 @@ const noOverflow = () => body.classList.add("oh");
 const overflow = () => body.classList.remove("oh");
 
 export const LogoTemplate = ({ logoData }) => {
-  const { alt, href, src } = logoData;
-
+  const { text, href } = logoData;
   return (
     <div className="header__logo">
-      <Link to={href} className="logo__link">
-        <img className="link__name" src={src} alt={alt} />
-      </Link>
+        <div className="header__logo__name" >
+        MENU MAKER
+        </div>    
     </div>
   );
 };
