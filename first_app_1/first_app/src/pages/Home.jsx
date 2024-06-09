@@ -65,7 +65,7 @@ const [isLoading, setLoading] = React.useState(true);
         <Products breakfast={breakfast} lunch={lunch} dinner={dinner} snack={snack} isLoading={isLoading}/>
       </section>
 
-      <section className="section contacts_section">
+      <section className="section contacts_section" id="contacts_block">
         <Contacts />
       </section>
     </>

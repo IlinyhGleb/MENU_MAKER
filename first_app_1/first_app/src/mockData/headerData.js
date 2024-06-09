@@ -10,7 +10,7 @@ export const menuData = [
   },
   {
     title: "Контакты",
-    href: "#",
+    href: "#contacts_block",
   },
 ];
 
