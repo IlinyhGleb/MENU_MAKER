@@ -17,7 +17,7 @@ export const menuData = [
 export const buttonsData = [
   {
     title: "Личный кабинет",
-    href: "/main",
+    href: "/account",
     isPrimary: false,
   },
   {

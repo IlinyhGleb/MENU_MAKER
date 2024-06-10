@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import {FormRegistration} from "./pages/FormRegistration";
 import {FormAuthorization} from "./pages/FormAuthorization";
 import MainPage from "./pages/MainPage";
+import { Account } from './pages/Account';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/authorization" element={<FormAuthorization/>}/>
       <Route element={<PrivateRoute />}>
         <Route path="/main" element={<MainPage/>}/>
+        <Route path="/account" element={<Account/>}/>
       </Route>
       
    </Routes>

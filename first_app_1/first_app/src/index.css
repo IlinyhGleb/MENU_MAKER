@@ -27,6 +27,121 @@ html {
   
 }
 
+/*HEADER ACCOUNT*/
+.account_section {
+  width: 100%;
+}
+
+.account_section .account_section_header {
+  display: flex;
+  width: 120%;
+  height: 90px;
+  margin: 0% auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background:linear-gradient(90deg, #7acc00 1.84%, #f49867 102.67%);
+}
+
+.account_section .account_section_header .header_center {
+  padding-top: 5%;
+  padding-left: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5%;
+}
+
+.account_section .account_section_header .header_right {
+  padding-top: 5%;
+  padding-right: 20px;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5%;
+
+}
+
+.account_section .account_section_header #menu__toggle {
+  opacity: 0;
+}
+.account_section .account_section_header #menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+.account_section .account_section_header #menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+.account_section .account_section_header #menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.account_section .account_section_header #menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.account_section .account_section_header .menu__btn {
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.account_section .account_section_header .menu__btn > span,
+.account_section .account_section_header .menu__btn > span::before,
+.account_section .account_section_header .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-duration: .25s;
+}
+.account_section .account_section_header .menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.account_section .account_section_header .menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.account_section .account_section_header .menu__box {
+  display: block;
+  position: fixed;
+  top: 90px;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #39352a;
+  opacity: 0.9;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.account_section .account_section_header .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.account_section .account_section_header .menu__item:hover {
+  background-color: #7acc00;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 95%;
+}
+
 /* Общие стили для всего приложения */
 
 body {
@@ -155,7 +270,7 @@ p {
 }
 
 .section {
-  max-width: 1169px;
+  /*max-width: 1169px;*/
   width: 100%;
 }
 
@@ -379,12 +494,12 @@ p {
 
 .hero_section {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   column-gap: 1rem;
   /* min-height: 60vh; */
   padding: 0rem 0 1rem;
   margin-top: 10%;
-  /*flex-direction: column;*/
 }
 
 .hero_section .hero_section__left {
@@ -1678,15 +1793,18 @@ margin-top: 11%;
   margin-left:10%;
   align-content: center;
   overflow: hidden;
-  flex-direction: column;
 }
 
 
-.hero_section_center  h3{
-  font-size: 50px;
-  color: #224622;
-  width: 70%;
-  margin-left: 15%;
+.hero_section_center h3{
+  background: linear-gradient(90deg, #7acc00 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 0%;
+  font-size: 60px;
   
 }
 
@@ -1696,7 +1814,7 @@ margin-top: 11%;
   font-size: 25px;
 }
 
-.hero_section_center    input{
+.hero_section_center input{
  margin-top: 20px;
   width: 20%;
   margin-left: 35%;
