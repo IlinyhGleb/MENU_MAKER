@@ -1,15 +1,15 @@
 export const menu_box = [
     {
-        title: "Создать новый план",
+        title: "Создать новое меню",
         href: "#",
     },
     {
         title: "Мои данные",
-        href: "#",
+        href: "/personal",
     },
     {
-        title: "Выйти",
-        href: "#",
+        title: "На главную",
+        href: "/main",
     }
 ];
 

@@ -8,7 +8,7 @@ const SignUp= () => {
 
 return(
  
-<><div className="section header"><h1> Форма регистрации</h1></div>
+<><div className="section header"><div> Форма регистрации</div></div>
     <Form
       onSubmit={onSubmit}
       validate={(values) => {

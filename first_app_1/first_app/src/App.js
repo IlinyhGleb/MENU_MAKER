@@ -6,6 +6,7 @@ import {FormRegistration} from "./pages/FormRegistration";
 import {FormAuthorization} from "./pages/FormAuthorization";
 import MainPage from "./pages/MainPage";
 import { Account } from './pages/Account';
+import { PersonalParams } from './pages/PersonalParams'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route element={<PrivateRoute />}>
         <Route path="/main" element={<MainPage/>}/>
         <Route path="/account" element={<Account/>}/>
+        <Route path="/personal"element={<PersonalParams/>}/>
       </Route>
       
    </Routes>

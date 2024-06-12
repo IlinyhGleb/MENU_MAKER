@@ -6,11 +6,11 @@ import { accountData, headerAccountData, logoData } from "../mockData/headerAcco
 import { Account } from "../pages/Account";
 
 export const ItemBoxTemplate = ({menu_box}) => {
-    const {title} = menu_box;
+    const {title, href} = menu_box;
     return(
         <li>
-            <a className="menu__item">
-                {title}
+            <a href={href} className="menu__item">
+                {title}  
             </a>   
         </li> 
 )};
