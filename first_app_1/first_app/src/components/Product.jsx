@@ -26,7 +26,7 @@ export const Product = ({caloricity,category_id, id,product_name,weight,weight_f
        <div className="products">
           {product_name}
         </div>
-        <label>
+        <label className='switch'>
           <input type="checkbox" checked={checked} onChange={changeCheckbox} />
           <span className="slider"></span>
         </label>

@@ -655,7 +655,573 @@ p {
   
 } 
 
+/* ХОЛОДИЛЬНИКИ */
+.account_body{
+  width: 50%;
+} 
 
+.account_body .fridges .fridges_header{
+  display: flex;	
+	box-sizing: border-box;
+	flex-direction: row;
+	outline: none;
+	border: 1px solid  #000000;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+  min-width: 230px;
+  width: 100%;
+	
+  text-decoration: none;
+	color: #000000;
+	background-color: #c3dd95;
+  box-shadow: 0 4px 6px rgba(97, 237, 66, 0.1), 0 1px 3px rgb(0 0 0 / 8%);
+	border: #ffffff;
+	user-select: none;
+	appearance: none;
+ 
+	align-items: center;
+	transition: box-shadow 0.2s;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.account_body .fridges .fridges_header p{
+  color: #ffffff;
+ width: 100%;
+  margin-left: 6%;
+  font-size: 22px;
+}
+.account_body .fridges .fridges_header button{
+ font-size: 35px;
+ font-weight:600;
+ background-color:  #c3dd95;
+ border-radius: 50px;
+ border-width: 1px;
+ color:#ffffff;
+ padding: 0rem 1rem 0rem 1rem;
+ border: 1px solid #ddf1ba;
+}
+.account_body .fridges .fridges_header button:hover{
+  
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid  #ffffff;
+ }
+ .account_body .fridges .fridge{
+  display: flex;	
+	box-sizing: border-box;
+	flex-direction: column;
+ }
+ .account_body .fridges .fridge .one_fridge{
+  display: flex;	
+	box-sizing: border-box;
+	flex-direction: row;
+	outline: none;
+	border: none;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+  min-width: 230px;
+  width: 100%;
+	
+  text-decoration: none;
+	color: #444;
+	background-color: #ffffff;
+  box-shadow: 1px 4px 6px 1px rgb(65 132 144 / 10%), 1px 1px 3px 1px rgb(0 0 0 / 8%);
+	
+	user-select: none;
+	appearance: none;
+ 
+	align-items: center;
+	transition: box-shadow 0.2s;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-top: 1%;
+ }
+
+ .account_body .fridges .fridge .one_fridge p{
+  color: #000000;
+  width: 100%;
+  margin-left: 6%;
+  font-size: 22px;
+ }
+ .account_body .fridges .fridge .one_fridge button{
+  
+  font-size: 25px;
+ font-weight:600;
+ background-color: #ffffff;
+ border-radius: 50px;
+ border-width: 1px;
+ padding: 0rem 1rem 0rem 1rem;
+ border: 1px solid  #ffffff;
+ }
+ .account_body .fridges .fridge .one_fridge button:hover{
+  
+ border: 1.3px solid  #bbf98c;
+ }
+
+
+ .account_body .fridges .fridge .one_fridge  img{
+  width:15px;
+  margin-bottom: 3px;
+ }
+ 
+ .account_body .fridges .fridge .prods_in_fridge{
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px;
+ }
+ .account_body .fridges .fridge .prods_in_fridge .prod{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 68%;
+  margin-left: 13%;
+  margin-bottom: 15px;
+ }
+ .account_body .fridges .fridge .prods_in_fridge .prod_header{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+ }
+
+ .account_body .fridges .fridge .prods_in_fridge .prod_header p{
+  color: #000000;
+  width: 100%;
+  padding-left: 0%;
+  margin-left: 0%;
+  font-size: 20px;
+ }
+ .account_body .fridges .fridge .prods_in_fridge .prod .products {
+  margin-right:0px;
+  width: 50%;
+  font-size: 18px;
+ }
+ 
+ .account_body .fridges .fridge .prods_in_fridge .prod .gr {
+  text-align: right;
+  width: 50%;
+  font-size: 18px;
+ }
+
+ /*КНОПКА ПЕРЕКЛЮЧЕНИЯ*/
+
+.switch{
+  display:inline-block;
+  position:relative;
+  width: 15%;
+  height: 30px;
+}
+
+.menu_prods .prod .switch {
+  width: 25%;
+}
+.switch input{
+  
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.slider {
+  content:"Шт";
+  position:absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  transition: 0.6s;
+  background-color: #edef81;
+  border-radius: 30px;
+}
+
+.slider::before{
+  font-size: 14px;
+  font-weight: 400;
+  content:"шт";
+  position:absolute;
+  cursor: pointer;
+  left:4px;
+  bottom: 4px;
+  height: 24px;
+  width: 24px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.6s;
+}
+
+input:checked + .slider::before{
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  content:"гр";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+input:checked + .slider{
+  background-color: #c3eb6c;
+}
+
+/*ДОБАВЛЕНИЕ ПРОДУКТОВ В ХОЛОДИЛЬНИК (НОВЫЙ ХОЛОДИЛЬНИК)*/
+
+.add_prods_in_fridge_section{
+  width: 50%;
+  margin-top: 15px;
+}
+
+.add_prods_in_fridge_section .products_header_select{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.add_prods_in_fridge_section .products_header_select p2{
+  font-size: 20px;
+  font-weight:lighter;
+ 
+}
+
+.add_prods_in_fridge_section .products_header_select p{
+  font-size: 26px;
+  color:#000000;
+  font-weight:bold;
+  width:100%;
+  margin-left: 0;
+  margin-bottom: 10px;
+ 
+}
+.add_prods_in_fridge_section .selection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add_prods_in_fridge_section .selection .prods_for_selection{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+border-radius: 30px;
+  border: 1px solid  #a2de7b;
+  
+  padding: 10px 10px 10px 10px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.add_prods_in_fridge_section .selection .prods_for_selection .selection_product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add_prods_in_fridge_section .selection .prods_for_selection .selection_product .prod{
+  display: flex;
+  flex-direction: row;
+  width: 51%;
+  
+}
+.add_prods_in_fridge_section .selection .prods_for_selection .selection_product .prod input{
+  fill: #55e42a;
+}
+.add_prods_in_fridge_section .selection .prods_for_selection .selection_product .prod p{
+ color: #000000;
+  margin-left: 5px;
+}
+
+.add_prods_in_fridge_section .add_new_prod{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+ 
+}
+.add_prods_in_fridge_section .add_new_prod p2{
+  font-size: 20px;
+  font-weight:lighter;
+  margin-bottom: 10px;
+}
+
+.add_prods_in_fridge_section .add_new_prod form{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+ flex-wrap: wrap;
+ gap: 50px;
+ margin-left: 3%;
+}
+
+.add_prods_in_fridge_section .add_new_prod form input{
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  height: 20px;
+}
+.add_prods_in_fridge_section .add_new_prod span{
+ display: none;
+}
+.add_prods_in_fridge_section .add_new_prod form select{
+  height: 22px;
+ 
+  margin-top: 2px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.add_prods_in_fridge_section .add_new_prod  .buttons_in{
+  margin-left: 35%;
+  margin-top: 0px;
+
+ }
+ .add_prods_in_fridge_section .add_new_prod  button{
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 16px;
+ }
+ .add_prods_in_fridge_section .add_new_prod  button:hover{
+  border: 1px solid white;
+  
+  color:white;
+ }
+ .add_prods_in_fridge_section .add_gramms{
+  width: 100%;
+ }
+
+ .add_prods_in_fridge_section .add_gramms .button_ready{
+  border-radius: 50px;
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 100px;
+ }
+ .add_prods_in_fridge_section .add_gramms  button{
+  border: 1px solid rgb(0, 0, 0);
+  
+ }
+ .add_prods_in_fridge_section .add_gramms  button:hover{
+  border: 1px solid white;
+  color:white;
+ }
+
+ .add_prods_in_fridge_section .add_gramms p{
+  font-size: 26px;
+  color:#000000;
+  font-weight:bold;
+  width:100%;
+  margin-left: 0;
+  margin-bottom: 15px;
+ }
+ .add_prods_in_fridge_section .add_gramms .added{
+  margin-bottom: 100px;
+  width: 100%;
+ }
+ .add_prods_in_fridge_section .add_gramms .added .one_added{
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+
+  flex-direction: row;
+ 
+ }
+ .add_prods_in_fridge_section .add_gramms .added .one_added .name {
+  margin-left: 10%;
+ width:60%;
+ }
+ .add_prods_in_fridge_section .add_gramms .added .one_added .name p2{
+  font-size: 20px;
+  font-weight:lighter;
+
+ }
+ .add_prods_in_fridge_section .add_gramms .added .one_added  .amount {
+  align-self: right;
+  
+ }
+ .add_prods_in_fridge_section .add_gramms .added .one_added .amount input{
+  font-size: 16px;
+  font-weight:lighter;
+  text-align: center;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid black;
+  
+ }
+
+
+ .add_prods_in_fridge_section .add_gramms .fridge_name p2{
+  font-size: 20px;
+  font-weight:lighter;
+  margin-bottom: 10px;
+ }
+ .add_prods_in_fridge_section .add_gramms .fridge_name {
+  display: flex;
+  flex-direction: column;
+ }
+ .add_prods_in_fridge_section .add_gramms .fridge_name form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+ .add_prods_in_fridge_section .add_gramms .fridge_name form button{
+ width: 200px;
+ }
+
+ .add_prods_in_fridge_section .add_name .button_ready{
+  border-radius: 50px;
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 100px;
+ }
+
+ .add_prods_in_fridge_section .add_name  button{
+  border: 1px solid rgb(0, 0, 0);
+
+ }
+ .add_prods_in_fridge_section .add_name  button:hover{
+  border: 1px solid white;
+  color:white;
+ }
+ .add_prods_in_fridge_section .add_name .fridge_name{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+
+ .add_prods_in_fridge_section .add_name .fridge_name p2{
+  font-size: 20px;
+  font-weight:lighter;
+  margin-bottom: 10px;
+  width: 65%;
+ }
+
+ .add_prods_in_fridge_section .add_name .fridge_name form {
+ width: 35%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+ .add_prods_in_fridge_section .add_name .fridge_name form input{
+  height: 40px;
+  width:95%;
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+ }
+ .add_prods_in_fridge_section .add_name .fridge_name form button{
+  width:200px;
+  margin-left: -145%;
+  margin-bottom: 100px;
+ }
+
+ .continue_menu{
+  width: 100%;
+ }
+
+ .continue_menu .continue{
+ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+ 
+ }
+ .continue_menu .continue p{
+ width: 100%;
+ color: #000000;
+ margin-left: 0;
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 15px;
+ }
+
+ .continue_menu .continue .buttons_continue{
+  width: 30%;
+  margin-left: 20%;
+  margin-right: 0;
+ }
+ .continue_menu .continue .buttons_continue button{
+  display: inline-block;	
+	box-sizing: border-box;
+	margin-left: 2%;
+	outline: none;
+	border: 1px solid  #7acc00;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+  min-width: 150px;
+  width: 150px;
+	
+  text-decoration: none;
+	color: #444;
+	background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(159, 244, 119, 0.1), 0 1px 3px rgba(54, 252, 252, 0.08);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+ }
+
+ .continue_menu .continue .buttons_continue button:hover{
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  background-color:  #7acc00;
+  color: #ffffff;
+ }
+
+
+.continue_menu .continue .buttons_continue_primary{
+  width: 30%;
+  margin-right: 0;
+}
+
+.continue_menu .continue .buttons_continue_primary button{
+  display: inline-block;	
+	box-sizing: border-box;
+	margin-left: 2%;
+	outline: none;
+	border: 1px solid  #7acc00;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+  min-width: 150px;
+  width: 150px;
+	
+  text-decoration: none;
+	color: #444;
+	background-color: #fff;
+  box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+ }
+
+ .continue_menu .continue .buttons_continue_primary button:hover{
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  background-color:  #7acc00;
+  color: #ffffff;
+ }
 
 /* Секция About*/
 .about_section {
@@ -1914,14 +2480,118 @@ margin-top: 10px ;
   font-size: 25px; 
   align-content: center;
   padding-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.personal_section .personal_user {
+  font-weight: normal;
+  font-size: 15px; 
+  align-content: center;
+  padding-left: 0px;
   
 }
 
+.personal_section .personal_user input {
+  width: 500px;
+  height: 30px;
+  border: 1.5px solid;
+  border-radius: 30px;
+  border-color: #8bc03b;
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  
+}
+.personal_section select {
+  width: 500px;
+  height: 30px;
+  border: 1.5px solid;
+  border-radius: 30px;
+  border-color: #8bc03b;
+  text-align: left;
+  font-size: 13px;
+  color: #444;
+}
 
+.personal_section .buttons {
+  margin-left: 20%;
+  margin-bottom: 50px;
+}
 
+.personal_section .person_buttons_prm {
+  display: inline-block;
+  margin-top: 30px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 10 15px 15px 0;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #444;
+    background-color: #fff;
+    border-color: #7acc00;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 8%), 0 1px 3px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    transition: box-shadow 0.2s;
+    margin-right: 10px;
+}
 
+.personal_section .person_buttons {
+  display: inline-block;
+  margin-top: 30px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 10 15px 15px 0;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #444;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 8%), 0 1px 3px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    transition: box-shadow 0.2s;
+    background-color:  #7acc00;
+    margin-right: 10px;
+}
 
+.personal_section .person_buttons:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  background-color: #f49867;
+}
 
+.personal_section .person_buttons_prm:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  background-color: #7acc00;
+}
 
 /* Медиа запросы для адаптива */
 @media screen and (max-width: 1230px) {

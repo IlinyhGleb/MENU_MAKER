@@ -14,7 +14,7 @@ export const userData = [
 ];
 
 export const paramHeader = 
-    "Мои параметры";
+    "МОИ ПАРАМЕТРЫ";
   
 export const paramData = [
     {
@@ -25,9 +25,6 @@ export const paramData = [
     },
     {
         title: "Возраст",
-    },
-    {
-        title: "Пол"
     },
 ];
 
@@ -45,11 +42,25 @@ export const activityData = [
 
 export const saveData = {
     title: "Сохранить",
+    href: "#"
 };
 
 export const exitData = {
     title: "Назад",
-}
+    href: "#"
+};
+
+export const sexData = [
+    {
+        title: "Мужской"
+    },
+    {
+        title: "Женский"
+    },
+];
+export const sexHeader = 
+    "Пол";
+
 export const personalData = {
     header, 
     userData, 
@@ -58,6 +69,7 @@ export const personalData = {
     activityData,
     saveData,
     exitData,
+    sexHeader,
 }
 
 export default personalData;
