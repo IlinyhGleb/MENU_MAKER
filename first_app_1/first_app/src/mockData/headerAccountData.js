@@ -1,7 +1,7 @@
 export const menu_box = [
     {
         title: "Создать новое меню",
-        href: "#",
+        href: "/choose",
     },
     {
         title: "Мои данные",

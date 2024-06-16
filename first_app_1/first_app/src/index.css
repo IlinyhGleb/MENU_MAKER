@@ -815,7 +815,7 @@ p {
   display:inline-block;
   position:relative;
   width: 15%;
-  height: 30px;
+  height: 20px;
 }
 
 .menu_prods .prod .switch {
@@ -829,7 +829,7 @@ p {
 }
 
 .slider {
-  content:"Шт";
+  content:" шт";
   position:absolute;
   cursor: pointer;
   top:0;
@@ -837,31 +837,31 @@ p {
   bottom: 0;
   right: 0;
   transition: 0.6s;
-  background-color: #edef81;
-  border-radius: 30px;
+  background-color: #f49867;
+  border-radius: 24px;
 }
 
 .slider::before{
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
-  content:"шт";
+  content:" шт";
   position:absolute;
   cursor: pointer;
   left:4px;
   bottom: 4px;
-  height: 24px;
-  width: 24px;
+  height: 14px;
+  width: 14px;
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
   transition: 0.6s;
 }
 
 input:checked + .slider::before{
-  transform: translateX(20px);
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  content:"гр";
-  font-size: 14px;
+  transform: translateX(31px);
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  content:" гр";
+  font-size: 11px;
   font-weight: 400;
 }
 
@@ -2416,6 +2416,7 @@ margin-top: 10px ;
   
   gap: 100px;
   margin-top: 250px;
+  margin-left: 6%;
   padding-bottom: 30px;
   width:100%;
  }
@@ -2431,13 +2432,23 @@ margin-top: 10px ;
   border-right: none;
   border-left: none;
   margin-bottom: 10px;
-  color: #224622;
+  color: #020202;
+
   font-weight:900;
 }
 .menu_prods .menuData .menuProducts .prod{
   display: flex;
   flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  margin-top: 10px;
 
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: #8bc03b;
 }
 
 .menu_prods  .menuData .menuProducts .prod .products{
@@ -2592,6 +2603,17 @@ margin-top: 10px ;
   -o-transition: all 0.3s ease-out;
   background-color: #7acc00;
 }
+
+/* Выбор холодильника для генерации*/
+.fridge_section_header {
+  font-weight: bolder;
+  font-size: 25px; 
+  align-content: center;
+  padding-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
 
 /* Медиа запросы для адаптива */
 @media screen and (max-width: 1230px) {

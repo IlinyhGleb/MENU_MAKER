@@ -5,14 +5,42 @@ import { Product } from './Product';
 export const Products = ({ breakfast,lunch,dinner,snack, isLoading }) => {
   return (
     <>
-      
       {isLoading ? (
-        <div className="skeleton-list">
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+        <div className="menu_prods" id="menu">
+        <div className="menuData">
+          <div className="menuTitle"> Завтрак</div>
+          <div className="menuProducts">
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+          </div>
+        </div>
+        <div className="menuData">
+          <div className="menuTitle"> Обед</div>
+          <div className="menuProducts">
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton /> 
+          </div>
+        </div>
+        <div className="menuData">
+          <div className="menuTitle"> Ужин</div>
+          <div className="menuProducts">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+        </div>
+        <div className="menuData">
+          <div className="menuTitle"> Перекус</div>
+          <div className="menuProducts">
+            <Skeleton />
+            <Skeleton />
+          </div>
+        </div>
         </div>
       ) : (
         <div className="menu_prods" id="menu">
